@@ -11,8 +11,10 @@ form.addEventListener("submit", (e) => {
     correctCounter = 0;
 
     checkInputs();
-    if(correctCounter == 4)
+    if(correctCounter == 4) {
         addUser();
+        success();
+    }
     
 });
 
@@ -104,4 +106,10 @@ function addUser() {
         password: password.value.trim(),
         block: false
     }))
+}
+
+function success() {
+    let choice = confirm("You have succesfully registered. do you want to leave registration page?");
+    if(choice)
+    document.location.href = "start.html";
 }
