@@ -23,7 +23,7 @@ function checkInputs() {
     const password2Value = password2.value.trim();
     if (usernameValue === "") {
         setErrorFor(username, "Username cannot be blank");
-    } else if (isUsername) {
+    } else if (!isUsername(usernameValue)) {
         setErrorFor(username, "Not a valid username");
     } else {
         setSuccessFor(username);
