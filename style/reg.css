@@ -160,6 +160,10 @@ body {
 	text-align: center;
 	cursor: pointer;
 }
+button a {
+    text-decoration: none;
+    color: black;
+}
 @media screen and (max-width: 480px) {
 
 	.social-panel-container.visible {
