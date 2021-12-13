@@ -1,0 +1,411 @@
+@font-face {
+font-family: "Osaka serif"; 
+src: url("../fonts/osakasan.ttf") format("truetype"); 
+font-style: normal; 
+font-weight: normal; 
+} 
+html{
+	height: 100%;
+}
+body{
+
+	height: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	color: #111111;
+	font-weight: 600;
+}
+
+h1 {
+	font-size: 70px;
+}
+
+h2 {
+	font-size: 36px;
+}
+
+h3 {
+	font-size: 30px;
+}
+
+h4 {
+	font-size: 24px;
+}
+
+h5 {
+	font-size: 18px;
+}
+
+h6 {
+	font-size: 16px;
+}
+
+.touhoulogo {
+	display: inline-block;
+}
+.logo {
+	width: 70px;
+}
+.but{
+	display: inline-block;
+	border: none;
+	font-size: 14px;
+	font-weight: 600;
+	min-width: 167px;
+	padding: 18px 47px 14px;
+	border-radius: 50px black;
+	text-transform: uppercase;
+	background: black;
+	color: black;
+	line-height: normal;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+}
+.but:hover{
+	color: skyblue;
+}
+.but.line {
+	background: transparent;
+	color: #fff;
+	-webkit-box-shadow: inset 0 0 0 1px #fff;
+	box-shadow: inset 0 0 0 1px #fff;
+}
+.shophame{
+	margin: 0;
+	font-family: "Osaka serif";
+	display: flex;
+	color: black;
+	text-transform: uppercase;
+	justify-content: normal;
+	font-size: 35px;
+}
+.header-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.nav-info .nav-item {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+.nav-item .nav-link{
+	color: black;
+	text-decoration: none;
+	font-size: 20px;
+}
+.wrapper {
+  max-width: 1110px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.cart{
+	width: 30px;
+}
+.account{
+	width: 30px;
+}
+.nav-item span {
+	position: absolute;
+	top: 34px;
+	left: 100%;
+	height: 16px;
+	min-width: 16px;
+	color: #fff;
+	font-size: 13px;
+	background: red;
+	text-align: center;
+	border-radius: 30px;
+	padding: 0 2px;
+	margin-left: -265px;
+}
+.main{
+	display: flex;
+	-webkit-box-pack: justify;
+	justify-content: space-between;
+}
+.headersection{
+	background: white;
+
+}
+
+/*slider*/
+.slidersection{
+	padding-bottom: 10px;
+	border-top: 1px white;
+	border-bottom: 1px white;
+}
+.slider{
+	position: relative;
+	height: 700px;
+
+}
+.sliderbg1{
+	background: url(../images/background1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+	background-attachment: fixed;
+	color: #cfcfcf;
+}
+.slider .silder-item{
+	position: relative;
+	height: 700px;
+}
+.slider .silder-item h2{
+	font-size: 90px;
+	font-family: "Osaka serif";
+	font-weight: 700;
+	margin-bottom: 10px;
+	position: relative;
+	top: 50px;
+}
+.slider .silder-item p{
+	font-size: 21px;
+	font-weight: 300;
+	margin-bottom: 38px;
+	position: relative;
+	top: 150px;
+}
+.slider .silder-item .but{
+	position: relative;
+	top: 200px;
+	right: 1px;
+}
+.slider .silder-item .but:hover{
+	background: white;
+	color: black;
+	opacity: 0.9;
+}
+.slider .silder-item .line{
+	margin-right: 3px ;
+}
+/*dsection*/
+.mdnotice{
+	font-size: 21px;
+}
+#deliverysection{
+	padding: 7% 0; 
+	background: #f0f8ff;
+}
+#deliverysection h4 {
+	font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+#deliverysection .col-md-4{
+	position: relative;
+}
+@media (min-width: 1200px){
+	#deliverysection .container {
+	width: 1100px;
+	}
+}
+/*Categories*/
+.categoriessection{
+	padding-top: 50px;
+  padding-bottom: 50px;
+}
+.categoriessection .section-title {
+	text-align: center;
+    font-size: 36px;
+    text-transform: uppercase;
+}
+.categories {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.numofcat {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 24%;
+          flex: 0 0 24%;
+  background: url(../images/sakura.jpg);
+  position: relative;
+  border: dashed;
+  border-radius: 40px;
+}
+.titless {
+	font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+.picturecat{
+	width: 200px;
+	height: 205px;
+	margin: 4px;
+	margin-bottom: 20px;
+	border-radius: 30px;
+}
+.popular-product {
+	padding-bottom: 60px;
+}
+
+.popular-product .section-title {
+	margin-bottom: 70px;
+}
+.product-item .pi-pic {
+	position: relative;
+	display: block;
+	height: 324px;
+	width: 216px;
+}
+.product-item .pi-text {
+	padding-top: 22px;
+	height: 87px;
+}
+
+
+.product-item .pi-text p {
+	font-size: 16px;
+	color: #111111;
+	margin-bottom: 0;
+}
+.products-picture{
+	height: 324px;
+	width: 216px;
+}
+/*Foooter section*/
+.footersection{
+	background: #282828;
+	padding-top: 20px;
+}
+.flogo{
+	padding-bottom: 40px;
+}
+.infpart {
+	margin-bottom: 30px;
+	overflow: hidden;
+}
+
+.infpart h2 {
+	font-size: 18px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: #fff;
+	margin-bottom: 45px;
+}
+
+.infpart p {
+	color: #8f8f8f;
+}
+.infpart.linkspart{
+
+}
+.infpart.linkspart p {
+	margin-bottom: 25px;
+	letter-spacing: -0.01em;
+}
+.infpart ul {
+	list-style: none;
+	float: left;
+	margin-right: 37px;
+}
+
+.infpart ul:last-child {
+	margin-right: 0;
+}
+
+.infpart ul li a {
+	display: inline-block;
+	position: relative;
+	padding-left: 20px;
+	font-size: 14px;
+	color: #8f8f8f;
+	margin-bottom: 6px;
+	text-decoration: none;
+}
+
+.infpart ul li a:after {
+	position: absolute;
+	content: "";
+	width: 5px;
+	height: 5px;
+	left: 0;
+	top: 8px;
+	border: 1px solid red;
+	border-radius: 50%;
+	-webkit-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	transition: all 0.2s;
+}
+
+.infpart ul li a:hover {
+	color: #fff;
+}
+
+.infpart ul li a:hover:after {
+	width: 7px;
+	height: 7px;
+	top: 6px;
+	background: #ec105a;
+}
+
+/* Social Panel*/
+.social{
+	padding: 0;
+	text-align: center;
+}
+.list-inline li {
+	display: inline-block;
+	padding-right: 11px;
+	margin-bottom: 10px;
+}
+.social-icons .fa {
+	font-size: 1.8em;
+}
+.social-icons .fa {
+	width: 25px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	color: #FFF;
+	color: rgba(255, 255, 255, 0.8);
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.social-icons.icon-circle .fa{ 
+	border-radius: 50%;
+}
+.social-icons .fa-facebook:hover{
+	color: #3b5998;
+}
+.social-icons .fa-instagram:hover{
+	color: #d6249f;
+	background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+
+}
+.social-icons .fa-twitter:hover{
+	color: #00acee;
+}
+.social-icons .fa-vk:hover{
+	color: #4C75A3;
+}
+.social-icons .fa-youtube-play:hover{
+	color: #FF0000;
+}
