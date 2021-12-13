@@ -101,6 +101,7 @@ function addUser() {
     localStorage.setItem(email.value.trim(), JSON.stringify({
         username: username.value.trim(),
         email: email.value.trim(),
-        password: password.value.trim()
+        password: password.value.trim(),
+        block: false
     }))
 }
