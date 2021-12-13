@@ -11,12 +11,13 @@ form.addEventListener("submit", (e) => {
     correctCounter = 0;
 
     checkInputs();
-    /*if(correctCounter == 4)
-        addUser();*/
+    if(correctCounter == 4)
+        addUser();
+    
 });
 
 function checkInputs() {
-    // trim to remove the whitespaces
+    //trim is used to remove spaces
     const usernameValue = username.value.trim();
     const emailValue = email.value.trim();
     const passwordValue = password.value.trim();
@@ -25,6 +26,8 @@ function checkInputs() {
         setErrorFor(username, "Username cannot be blank");
     } else if (!isUsername(usernameValue)) {
         setErrorFor(username, "Not a valid username");
+    } else if (localStorage.getItem(emailValue)) {
+        setErrorFor(username, "Username is taken");
     } else {
         setSuccessFor(username);
     }
@@ -33,6 +36,8 @@ function checkInputs() {
         setErrorFor(email, "Email cannot be blank");
     } else if (!isEmail(emailValue)) {
         setErrorFor(email, "Not a valid email");
+    } else if (localStorage.getItem(emailValue)) {
+        setErrorFor(email, "Email is taken");
     } else {
         setSuccessFor(email);
     }
@@ -90,4 +95,12 @@ function isPassword(password) {
         !/^\@\!\#\$\%\^\&\*\(\)\+\=$/.test(password) &&
         /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z_-]{8,}$/.test(password)
     );
+}
+
+function addUser() {
+    localStorage.setItem(email.value.trim(), JSON.stringify({
+        username: username.value.trim(),
+        email: email.value.trim(),
+        password: password.value.trim()
+    }))
 }
