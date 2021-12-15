@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Admin Touhou</title>
+	<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" type="text/css" href="style/admin.css">
+	<link rel="stylesheet" type="text/css" href="style/font-awesome.min.css">
+</head>
+<body>
+	<!--Navigation aside-->
+	<div class="aside">
+		<div class="logo">
+			<img src="./images/logo1.png" class="logopicture"><br>
+			<span class="l_name">Touhou</span>
+		</div>
+		<ul class="nav-link">
+			<li>
+				<a href="admin1.html" >
+					<i class='bx bxs-dashboard bx-burst bx-rotate-90' ></i>
+					<span class="nav_name">Dashboard</span>
+				</a>
+			</li>
+			<li>
+				<a href="#"class="active">
+					<i class='bx bxs-user-account bx-burst bx-flip-horizontal' ></i>
+					<span class="nav_name">Users</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bx-briefcase-alt bx-burst' ></i>
+					<span class="nav_name">Sellers</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bx-calculator bx-burst'></i>
+					<span class="nav_name">Products</span>
+				</a>
+			</li>
+			<li>
+				<a href="start.html">
+					<i class='bx bxs-log-out-circle bx-tada bx-rotate-90' ></i>
+					<span class="nav_name">Log out</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<!-- main section-->
+	<div class="main">
+		<!--Navigation-->
+		<nav class="nav-bar">
+			<div class="page">
+				<span class="pagename">Users</span>
+			</div>
+			<div class="panel">
+				<span class="admin">Admin Panel</span>
+			</div>
+			<div class="account-part">
+				<img src="images/adminpanel.jpg" alt="cute">
+				<span class="account-name">Nurbolat</span>
+			</div>
+		</nav>
+		<!--Main content-->
+		<div class="content">
+			<div class="users-list">
+				<div class="list blockpart">
+					<div class="section-name">List of users</div>
+					<ul class="users">
+						<li id="1">
+							<span class="users-number">1.</span>
+							<a href="#">
+								<span class="users-name">Eren_Yeager</span>
+							</a>
+							<span class="users-email">josehphisoki@gmail.com</span>
+							<div class="button-part">
+								<button class="blockbtn floating-button" onclick=""><span class="text">Disable</span></button>
+								<button class="changebtn floating-button" onclick=""><span class="text">Change</span></button>
+								<button class="delbtn floating-button" onclick=""><span class="text">Delete</span></button>
+							</div>
+						</li>
+						<li id="2">
+							<span class="users-number">2.</span>
+							<a href="#">
+								<span class="users-name">Mikasa</span>
+							</a>
+							<span class="users-email">neafwiuef@gmail.com</span>
+							<div class="button-part">
+								<button class="blockbtn floating-button" onclick=""><span class="text">Disable</span></button>
+								<button class="changebtn floating-button" onclick=""><span class="text">Change</span></button>
+								<button class="delbtn floating-button" onclick=""><span class="text">Delete</span></button>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
