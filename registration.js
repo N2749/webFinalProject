@@ -29,7 +29,7 @@ function checkInputs() {
         setErrorFor(username, "Username cannot be blank");
     } else if (!isUsername(usernameValue)) {
         setErrorFor(username, "Not a valid username");
-    } else if (localStorage.getItem(emailValue)) {
+    } else if (userPresence()) {
         setErrorFor(username, "Username is taken");
     } else {
         setSuccessFor(username);
@@ -39,7 +39,7 @@ function checkInputs() {
         setErrorFor(email, "Email cannot be blank");
     } else if (!isEmail(emailValue)) {
         setErrorFor(email, "Not a valid email");
-    } else if (localStorage.getItem(emailValue)) {
+    } else if (userPresence()) {
         setErrorFor(email, "Email is taken");
     } else {
         setSuccessFor(email);
@@ -98,6 +98,13 @@ function isPassword(password) {
         !/^\@\!\#\$\%\^\&\*\(\)\+\=$/.test(password) &&
         /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z_-]{8,}$/.test(password)
     );
+}
+
+function userPresence() {
+    let users = JSON.parse(localStorage.getItem("users"));
+    for (let user of users)
+        if (user.username == username.value || user.email == email.value)
+            return true;
 }
 
 function addUser() {
