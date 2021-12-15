@@ -7,6 +7,7 @@ form.addEventListener("submit", (e) => {
 
     checkInputs();
     if (userExistence()) checkPassword();
+    if(isAdmin()) document.location.href = "admin1.html";
 });
 //validation of inputs
 function checkInputs() {
@@ -71,4 +72,9 @@ function checkPassword() {
         if (user.password == password.value)
             document.location.href = "mainpage.html";
         else setErrorFor(password, "Incorrect Password");
+}
+
+function isAdmin() {
+    if (login.value === "admin" && password.value === "admin")
+        return true;
 }
