@@ -4,26 +4,27 @@ const email = document.getElementById("email");
 const password = document.getElementById("password");
 const password2 = document.getElementById("password2");
 var correctCounter;
-
+if (localStorage.getItem("users") == null) {
+    let usersArray = [];
+    localStorage.setItem("users", JSON.stringify(usersArray));
+}
 form.addEventListener("submit", (e) => {
     e.preventDefault();
 
     correctCounter = 0;
 
     checkInputs();
-    if(correctCounter == 4) {
+    if (correctCounter == 4) {
         addUser();
         success();
     }
-    
 });
 
 function checkInputs() {
-    //trim is used to remove spaces
-    const usernameValue = username.value.trim();
-    const emailValue = email.value.trim();
-    const passwordValue = password.value.trim();
-    const password2Value = password2.value.trim();
+    const usernameValue = username.value;
+    const emailValue = email.value;
+    const passwordValue = password.value;
+    const password2Value = password2.value;
     if (usernameValue === "") {
         setErrorFor(username, "Username cannot be blank");
     } else if (!isUsername(usernameValue)) {
@@ -100,16 +101,19 @@ function isPassword(password) {
 }
 
 function addUser() {
-    localStorage.setItem(email.value.trim(), JSON.stringify({
-        username: username.value.trim(),
-        email: email.value.trim(),
-        password: password.value.trim(),
-        block: false
-    }))
+    let users = JSON.parse(localStorage.getItem("users"));
+    users.push({
+        username: username.value,
+        email: email.value,
+        password: password.value,
+        block: false,
+    });
+    localStorage.setItem("users", JSON.stringify(users));
 }
 
 function success() {
-    let choice = confirm("You have succesfully registered. do you want to leave registration page?");
-    if(choice)
-    document.location.href = "start.html";
+    let choice = confirm(
+        "You have succesfully registered. Do you want to leave registration page?"
+    );
+    if (choice) document.location.href = "start.html";
 }

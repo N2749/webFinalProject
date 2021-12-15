@@ -1,40 +1,41 @@
 const form = document.getElementById("form");
-const email = document.getElementById("email");
+const login = document.getElementById("login");
 const password = document.getElementById("password");
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
 
     checkInputs();
-    userExistence();
+    if (userExistence()) checkPassword();
 });
-
+//validation of inputs
 function checkInputs() {
-    //trim is used to remove spaces
-    const emailValue = email.value.trim();
-    const passwordValue = password.value.trim();
+    const loginValue = login.value;
+    const passwordValue = password.value;
 
-    if (emailValue === "") {
-        setErrorFor(email, "Email cannot be blank");
-    } else if (!isEmail(emailValue)) {
-        setErrorFor(email, "Not a valid email");
-    } else if (!localStorage.getItem(emailValue)) {
-        setErrorFor(email, "User does not exist");
+    if (loginValue === "") {
+        setErrorFor(login, "Field cannot be blank");
+    } else if (!userExistence()) {
+        setErrorFor(login, "User does not exist");
     } else {
-        setSuccessFor(email);
+        setSuccessFor(login);
     }
 
-    if (passwordValue === "") {
-        setErrorFor(password, "Password cannot be blank");
-    } else if (passwordValue.length < 8) {
-        setErrorFor(
-            password,
-            "Password must be equal or more than 8 characters"
-        );
-    } else if (!isPassword(passwordValue)) {
-        setErrorFor(password, "Not a valid Password");
+    if (loginValue === "" && passwordValue !== "") {
+        setErrorFor(login, "Type login first");
     } else {
-        setSuccessFor(password);
+        if (passwordValue === "") {
+            setErrorFor(password, "Password cannot be blank");
+        } else if (passwordValue.length < 8) {
+            setErrorFor(
+                password,
+                "Password must be equal or more than 8 characters"
+            );
+        } else if (!isPassword(passwordValue)) {
+            setErrorFor(password, "Not a valid Password");
+        } else {
+            setSuccessFor(password);
+        }
     }
 }
 
@@ -50,15 +51,6 @@ function setSuccessFor(input) {
     formControl.className = "form-control success";
 }
 
-function isEmail(email) {
-    return (
-        /^([\.\_\-a-zA-Z0-9]+)@([a-zA-Z0-9]+)\.([a-zA-Z]+)$/.test(email) ||
-        /^([\.\_\-a-zA-Z0-9]+)@([a-zA-Z0-9]+)\.([a-zA-Z]+)\.([a-zA-Z]+)$/.test(
-            email
-        )
-    );
-}
-
 function isPassword(password) {
     return (
         !/^\@\!\#\$\%\^\&\*\(\)\+\=$/.test(password) &&
@@ -67,17 +59,16 @@ function isPassword(password) {
 }
 
 function userExistence() {
-    if (localStorage.getItem(email.value.trim())) {
-        let user = JSON.parse(localStorage.getItem(email.value.trim()));
-        if (user.password === password.value.trim()) 
-            success();
-        else 
-            setErrorFor(password, "Incorrect Password");
-        return true;
-    }
-    setErrorFor(password, "Type email first");
+    let users = JSON.parse(localStorage.getItem("users"));
+    for (let user of users)
+        if (user.username == login.value || user.email == login.value)
+            return true;
 }
 
-function success() {
-    document.location.href = "mainpage.html";
+function checkPassword() {
+    let users = JSON.parse(localStorage.getItem("users"));
+    for (let user of users)
+        if (user.password == password.value)
+            document.location.href = "mainpage.html";
+        else setErrorFor(password, "Incorrect Password");
 }
