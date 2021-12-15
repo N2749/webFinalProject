@@ -113,7 +113,8 @@ function addUser() {
         username: username.value,
         email: email.value,
         password: password.value,
-        block: false,
+        ban: false,
+        banReason: ""
     });
     localStorage.setItem("users", JSON.stringify(users));
 }
