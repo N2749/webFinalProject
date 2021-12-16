@@ -5,8 +5,12 @@ const password = document.getElementById("password");
 form.addEventListener("submit", (e) => {
     e.preventDefault();
 
+    if (isAdmin()) document.location.href = "admin1.html";
     checkInputs();
-    if (userExistence()) checkPassword();
+    if (userExistence()) {
+        if (!userBan()) checkPassword();
+        else banReason();
+    }
 });
 //validation of inputs
 function checkInputs() {
@@ -63,12 +67,34 @@ function userExistence() {
     for (let user of users)
         if (user.username == login.value || user.email == login.value)
             return true;
+    return false;
+}
+
+function userBan() {
+    let users = JSON.parse(localStorage.getItem("users"));
+    for (let user of users)
+        if (user.username == login.value || user.email == login.value)
+            return user.ban;
+}
+
+function banReason() {
+    let users = JSON.parse(localStorage.getItem("users"));
+    for (let user of users) {
+        if (user.username == login.value || user.email == login.value)
+            alert(`You were banned. The reason is: ${user.banReason}`);
+    }
 }
 
 function checkPassword() {
     let users = JSON.parse(localStorage.getItem("users"));
     for (let user of users)
-        if (user.password == password.value)
-            document.location.href = "mainpage.html";
-        else setErrorFor(password, "Incorrect Password");
+        if (user.username == login.value || user.email == login.value) {
+            if (user.password == password.value)
+                document.location.href = "mainpage.html";
+            else setErrorFor(password, "Incorrect Password");
+        }
+}
+
+function isAdmin() {
+    if (login.value === "admin" && password.value === "admin") return true;
 }

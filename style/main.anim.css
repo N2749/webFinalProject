@@ -1,0 +1,10 @@
+.media {
+    transform: translate(0px, 120%);
+    opacity: 0;
+    transition: all 0.8s ease 0s;
+}
+
+.media._active {
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
