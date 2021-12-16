@@ -1,7 +1,7 @@
 const animItems = document.querySelectorAll('._anim_items')
 if(animItems.length > 0){
     window.addEventListener('scroll', animOnScroll);
-    function animOnScroll(params){
+    function animOnScroll(){
         for(let index = 0; index < animItems.length; index++){
             const animItem = animItems[index];
             const animItemHeight = animItem.offsetHeight;
@@ -14,7 +14,7 @@ if(animItems.length > 0){
                 animItemPoint = window.innerHeight - window.innerHeight / animStart;
             }
 
-            if((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)){
+            if((scrollY > animItemOffset - animItemPoint) && scrollY < (animItemOffset + animItemHeight)){
                 animItem.classList.add('_active');
             }else{
                 if(!animItem.classList.contains('_anim-no-hide')){
@@ -25,8 +25,8 @@ if(animItems.length > 0){
     }
     function offset(el){
         const rect = el.getBoundingClientRect(), 
-            scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-            scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            scrollLeft = window.scrollX || document.documentElement.scrollLeft,
+            scrollTop = window.scrollY || document.documentElement.scrollTop;
         return{top: rect.top + scrollTop, left: rect.left + scrollLeft}
     }
 
