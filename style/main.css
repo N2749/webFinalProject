@@ -1,9 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500;1,600&display=swap');
+
 @font-face {
 font-family: "Osaka serif"; 
 src: url("../fonts/osakasan.ttf") format("truetype"); 
 font-style: normal; 
 font-weight: normal; 
 } 
+*{
+	margin: 0;
+	padding: 0;
+}
 html{
 	height: 100%;
 }
@@ -86,6 +92,18 @@ h6 {
 	justify-content: normal;
 	font-size: 35px;
 }
+.foshophame{
+	margin: 0;
+	font-family: "Osaka serif";
+	display: flex;
+	color: white;
+	text-transform: uppercase;
+	justify-content: normal;
+	font-size: 35px;
+}
+.shophame:hover{
+	color: red;
+}
 .header-top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -103,10 +121,43 @@ h6 {
   margin-left: 25px;
   margin-right: 25px;
 }
+.nav-item:hover{
+	opacity: 0.8;
+	color: black;
+}
 .nav-item .nav-link{
 	color: black;
 	text-decoration: none;
 	font-size: 20px;
+}
+.nav-link:hover{
+	color: black;
+	opacity: 0.9;
+}
+@media (max-width: 993px) {
+  .linetog {
+    width: 18px;
+    height: 18px;
+  }
+  nav{
+  	display: none;
+  }
+}
+
+
+.nav-list {
+  list-style: none;
+  padding-left: 0;
+  font-size: 14px;
+}
+
+.nav-list-item {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.nav .nav-item:hover>a {
+	color: #f51167;
 }
 .wrapper {
   max-width: 1110px;
@@ -120,19 +171,8 @@ h6 {
 .account{
 	width: 30px;
 }
-.nav-item span {
-	position: absolute;
-	top: 34px;
-	left: 100%;
-	height: 16px;
-	min-width: 16px;
-	color: #fff;
-	font-size: 13px;
-	background: red;
-	text-align: center;
-	border-radius: 30px;
-	padding: 0 2px;
-	margin-left: -265px;
+.logoff{
+	width: 30px;
 }
 .main{
 	display: flex;
@@ -146,15 +186,11 @@ h6 {
 
 /*slider*/
 .slidersection{
-	padding-bottom: 10px;
 	border-top: 1px white;
 	border-bottom: 1px white;
+	width: 100%;
 }
-.slider{
-	position: relative;
-	height: 700px;
 
-}
 .sliderbg1{
 	background: url(../images/background1.jpg);
 	background-repeat: no-repeat;
@@ -220,6 +256,10 @@ h6 {
 .categoriessection{
 	padding-top: 50px;
   padding-bottom: 50px;
+  background-image: url(../images/s.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 .categoriessection .section-title {
 	text-align: center;
@@ -230,22 +270,24 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-wrap: wrap;
   text-align: center;
-  margin-top: 100px;
-  margin-bottom: 100px;
 }
 .numofcat {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 24%;
-          flex: 0 0 24%;
-  background: url(../images/sakura.jpg);
-  position: relative;
-  border: dashed;
-  border-radius: 40px;
+  float: left;
+  width: 250px;
+  margin-right: 3%;
+  margin-top: 50px;
+  margin: auto;
+  text-align: center!important;
 }
+
+.categoriessection img {
+  padding: 5px;
+  float: left;
+  width: 100%;
+}
+
 .titless {
 	font-size: 30px;
   font-weight: 600;
@@ -253,28 +295,41 @@ h6 {
   text-transform: uppercase;
 }
 .picturecat{
-	width: 200px;
-	height: 205px;
+	width: 210px;
+	height: 320px;
 	margin: 4px;
 	margin-bottom: 20px;
-	border-radius: 30px;
+	border: 5px solid white;
+	object-fit: cover;
 }
 .popular-product {
+	padding-top: 60px;
 	padding-bottom: 60px;
 }
-
 .popular-product .section-title {
 	margin-bottom: 70px;
 }
 .product-item .pi-pic {
 	position: relative;
-	display: block;
+	display: inline-block;
 	height: 324px;
 	width: 216px;
 }
 .product-item .pi-text {
 	padding-top: 22px;
 	height: 87px;
+	display: inline-block;
+}
+@media(max-width: 778px){
+	.product-item{
+		margin-bottom: 10px;
+	}
+	.product-item .pi-text{
+		margin-left: 20px;
+	}
+	.categoriessection{
+		background-size: 778px 800px;
+	}
 }
 
 
@@ -282,6 +337,7 @@ h6 {
 	font-size: 16px;
 	color: #111111;
 	margin-bottom: 0;
+	margin: 0!important;
 }
 .products-picture{
 	height: 324px;
@@ -294,6 +350,7 @@ h6 {
 }
 .flogo{
 	padding-bottom: 40px;
+	text-align: center!important;
 }
 .infpart {
 	margin-bottom: 30px;
@@ -312,7 +369,6 @@ h6 {
 	color: #8f8f8f;
 }
 .infpart.linkspart{
-
 }
 .infpart.linkspart p {
 	margin-bottom: 25px;
@@ -345,8 +401,6 @@ h6 {
 	height: 5px;
 	left: 0;
 	top: 8px;
-	border: 1px solid red;
-	border-radius: 50%;
 	-webkit-transition: all 0.2s;
 	-o-transition: all 0.2s;
 	transition: all 0.2s;
@@ -360,7 +414,7 @@ h6 {
 	width: 7px;
 	height: 7px;
 	top: 6px;
-	background: #ec105a;
+
 }
 
 /* Social Panel*/
@@ -408,4 +462,370 @@ h6 {
 }
 .social-icons .fa-youtube-play:hover{
 	color: #FF0000;
+}
+.animate1{
+— moz-transition: all 1s ease;
+— webkit-transition: all 1s ease;
+— o-transition: all 1s ease;
+transition: all 1s ease;
+}
+
+.animate1:hover{
+— moz-transform: scale(1.5);
+— webkit-transform: scale(1.5);
+— o-transform: scale(1.5);
+— ms-transform: scale(1.5);
+transform: scale(1.5);
+}
+.price{
+	float: inherit;
+  overflow: hidden;
+  font-weight: 700;
+  color: black;
+  padding-bottom: 30px;
+}
+@media (max-width: 500px) {
+	.categoriessection{
+		width: 500px;
+	}
+  .categoriessection .numofcat {
+    width: 70%!important;
+    margin-right: 0!important;
+    margin-left: 10%!important;
+  }
+}
+
+
+
+/*Category page manga*/
+.mangabg1{
+	background: url(../images/backgroundmanga.jpg);
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-attachment: fixed;
+	color: #cfcfcf;
+}
+.slider .manga-item{
+	position: relative;
+	height: 400px;
+}
+.slider .manga-item h2{
+	font-size: 100px;
+	font-family: "Osaka serif";
+	font-weight: 700;
+	margin-bottom: 10px;
+	display: inline-block;
+	width: 330px;
+	color: #fff;
+	position: relative;
+	left: 65%;
+	top: 140px;
+}
+@media (max-width: 778px){
+.slider .manga-item h2 {
+  left: 25%;
+}
+}
+/*category section*/
+.categorysection{
+	padding-top: 40px;
+	padding-bottom: 70px;
+}
+.filtersection {
+	margin-bottom: 0px;
+}
+.filtersection .filtername{
+	font-size: 20px;
+	font-weight: 600;
+	color: #000;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+.filter-menu{
+	padding-bottom: 40px;
+}
+.filter-menu .filter-item{
+	display: flex;
+	position: relative;
+	flex-wrap: wrap;
+  
+  align-content: space-between;
+  flex-direction: column;
+	margin-right: 14px;
+}
+.filter-menu .filter-item label{
+	
+	border-radius: 50px;
+	position: relative;
+	cursor: pointer;
+}
+.inputt{
+	margin: 10px 0;
+}
+input[type=checkbox] {display: none;}
+
+input[type=checkbox] + label:before {
+    content: "\2714";
+    color: transparent;
+    display: inline-block;
+    border: 1px solid #ccc;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 10px;
+    margin: -5px 5px 0 0;
+    height: 15px;
+    width: 15px;
+    text-align: center;
+    vertical-align: middle;
+    transition: color ease .3s;
+}
+
+input[type=checkbox]:checked + label:before {
+    color: #f73149;
+    border-color: #000;
+}
+select {
+  background-color: white;
+  border: thin solid #f73149;
+  border-radius: 4px;
+  display: inline-block;
+  font: inherit;
+  width: 200px;
+  line-height: 1.5em;
+  padding: 0.5em 3.5em 0.5em 1em;
+  margin: 0;      
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+select.minimal {
+  background-image:
+    linear-gradient(45deg, transparent 50%, gray 50%),
+    linear-gradient(135deg, gray 50%, transparent 50%),
+    linear-gradient(to right, #ccc, #ccc);
+  background-position:
+    calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px),
+    calc(100% - 2.5em) 0.5em;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1px 1.5em;
+  background-repeat: no-repeat;
+}
+
+select.minimal:focus {
+  background-image:
+    linear-gradient(45deg, green 50%, transparent 50%),
+    linear-gradient(135deg, transparent 50%, green 50%),
+    linear-gradient(to right, #ccc, #ccc);
+  background-position:
+    calc(100% - 15px) 1em,
+    calc(100% - 20px) 1em,
+    calc(100% - 2.5em) 0.5em;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1px 1.5em;
+  background-repeat: no-repeat;
+  border-color: green;
+  outline: 0;
+}
+.pagination {
+  display: inline-block;
+  position: relative;
+  left: 29%;
+}
+.pagination a {
+  color: black;
+  float: right;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+.pagination a.active {
+  background-color: #f73149;
+  color: white;
+  border-radius: 5px;
+}
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+  color: black;
+  border-radius: 5px;
+}
+.row-name{
+	font-size: 48px;
+	font-weight: 600;
+	text-align: center;
+	margin-bottom: 10px;
+	font-family: 'Poppins', sans-serif;
+	border-bottom: 2px solid grey;
+	padding-bottom: 10px;
+}
+/*Manga page*/
+.mangasection{
+	padding-top: 30px;
+	padding-bottom: 65px;
+}
+.jojopicture{
+	width: 60%;
+}
+.otherpict{
+	margin-top: 30px;
+}
+.choosepict{
+	width: 1200px;
+}
+.preview{
+	width: 84px;
+	height: 125px;
+	float: left;
+	margin-right: 31px;
+	overflow: hidden;
+	cursor: pointer;
+	position: relative;
+}
+
+.preview:last-child {
+	margin-right: 0;
+}
+.choosepict .preview:hover {
+	border: 4px solid #f73149;
+}
+
+.inf-section .inf-title{
+	font-size: 36px;
+	font-weight: 600;
+	font-family: 'Poppins', sans-serif;
+	color: #000;
+	text-transform: uppercase;
+	margin-bottom: 15px;
+}
+.inf-section .inf-authors{
+	font-size: 20px;
+	font-weight: 500;
+	color: #000;
+	font-family: 'Poppins', sans-serif;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+}
+.rating{
+	line-height: 1.3em;
+  font-size: 12px;
+  display: table;
+  margin-top: 20px;
+  outline: none !important;
+}
+.rating .rating-layer{
+	display: table-cell;
+  vertical-align: middle;
+  padding-right: 5px;
+  cursor: pointer;
+  padding-top: 0;
+}
+.rating-layer .stars{
+	display: inline;
+}
+.stars li{
+	line-height: 1.4em;
+	list-style: none;
+	display: inline-block;
+  vertical-align: top;
+  width: 15px;
+  height: 15px;
+  margin: 0;
+  padding: 0;
+  background: url(../images/new_stars.png) no-repeat;
+}
+.stars li .rate{
+	background-position: top;
+}
+.quantity{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	margin-top: 30px;
+	margin-bottom: 40px;
+}
+.quantity h2{
+	float: left;
+	margin-right: 15px;
+	text-transform: capitalize;
+	font-size: 30px;
+	font-weight: 500;
+	font-family: 'Poppins', sans-serif;
+	color: #000;
+	padding-top: 10px;
+	margin-bottom: 10px;
+	margin-right: 100%;
+}
+.quantity .amount{
+	width: 94px;
+	height: 36px;
+	border: 2px solid #f73149;
+	padding: 0 15px;
+	float: left;
+}
+.quantity .amount input{
+	width: 30px;
+	float: left;
+	border: none;
+	height: 36px;
+	line-height: 40px;
+	padding-top: 1px;
+	margin-left: 15px;
+	font-size: 20px;
+	text-align: center;
+	background-color: transparent;
+}
+.floating-button {
+  text-decoration: none;
+  display: inline-block;
+  width: 70px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 45px;
+  margin: 10px 20px;
+  font-size: 11px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: #f73149;
+  background: white;
+  box-shadow: 0 8px 15px #f73149;
+  transition: .3s;
+  margin-bottom: 30px;
+}
+.floating-button:hover {
+  box-shadow: 0 15px 20px #f73149;
+  color: #f73149;
+  transform: translateY(-7px);
+}
+.inf-inf{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-top: 2px solid grey;
+}
+.inf-inf-title{
+	font-size: 32px;
+	font-weight: 500;
+	float: left;
+	font-family: 'Poppins', sans-serif;
+	color: #000;
+	text-transform: uppercase;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-right: 100%;
+}
+.inf-inf .mangainf p{
+	color: #8f8f8f;
+	margin-bottom: 25px;
+	line-height: 1.8;
 }
