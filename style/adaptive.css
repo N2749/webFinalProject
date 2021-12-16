@@ -11,7 +11,7 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+ {
 	margin: 0;
 	color: #111111;
 	font-weight: 600;
@@ -887,7 +887,7 @@ ol {
 	-o-transition: all 0.4s ease 0.3s;
 	transition: all 0.4s ease 0.3s;
 }
-
+/*
 .product-item .pi-text h6 {
 	float: right;
 	padding-left: 40px;
@@ -895,7 +895,7 @@ ol {
 	font-weight: 700;
 	color: #111111;
 }
-
+*/
 /* -----------------------
   Product filter section
 -------------------------*/

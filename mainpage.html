@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Touhou Shop</title>
     <!-- Style -->
-    <link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="style/main.css">
     <link rel="stylesheet" type="text/css" href="style/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="style/flaticon.css">
@@ -18,8 +17,8 @@
 
 <body>
     <div class="background112">
-        <!-- Header 1-->
-        <div class="headersection">
+    <!-- Header 1-->
+    <div class="headersection">
             <div class="wrapper">
                 <header class="header-top">
                     <a href="#" class="touhoulogo">
@@ -29,33 +28,34 @@
                     <nav>
                         <ul class="nav nav-info">
                             <li class="nav-item"><a href="mainpage.html" class="nav-link">Home</a></li>
-                            <li class="nav-item"><a href="mainpage.html" class="nav-link">Categories</a></li>
+                            <li class="nav-item"><a href="#category" class="nav-link">Categories</a>
+                            </li>
                             <li class="nav-item"><a href="mainpage.html" class="nav-link">Delivery</a></li>
                             <li class="nav-item"><a href="mainpage.html" class="nav-link">Contact</a></li>
                         </ul>
                     </nav>
-                    <a class="nav-item" href=""><img src="images/shopping-cart.png" class="cart"><span>2</span></a>
+                    <a class="nav-item" href=""><img src="images/shopping-cart.png" class="cart"></a>
                     <a class="nav-item" href=""><img src="images/user.png" class="account"></a>
+                    <a class="nav-item" href="start.html"><img src="images/logout.png" class="logoff"></a>
                 </header>
             </div>
-        </div>
-        <!--Slider Section-->
-        <div class="slidersection">
-            <div class="slider owl-carousel">
-                <div class="silder-item sliderbg1">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xl-7 col-lg-8 text-white">
-                                <h2>Touhou Shop</h2>
-                                <p>Online store with goods from Japan. You can find cosmetics, music records, manga,
-                                    etc.</p>
-                                <a href="#" class="but line">Go to shop</a>
-                            </div>
+    </div>
+    <!--Slider Section-->
+    <div class="slidersection">
+        <div class="slider owl-carousel">
+            <div class="silder-item sliderbg1">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-7 col-lg-8 text-white fadeInDown animated">
+                            <h2 class="">Touhou Shop</h2>
+                            <p>Online store with goods from Japan. You can find cosmetics, music records, manga, etc.</p>
+                            <a href="#" class="but line">Go to shop</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div>  
+    </div>
     </div>
     <!--delivery-->
     <div id="deliverysection">
@@ -65,20 +65,20 @@
 
                 <div class="media">
                     <i class="fa fa-plane fa-4x"></i>
-                    <div class="media-body">
-                        <h4 class="media-heading">FREE & FAST DELIVERY</h4>
-                        <p>Delivery to any region of Kazakhstan</p>
-                    </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">FREE & FAST DELIVERY</h4>
+                    <p>Delivery to any region of Kazakhstan</p>
+                  </div>
                 </div>
 
             </div>
             <div class="col-md-4">
                 <div class="media">
-                    <i class="fa fa-plane fa-4x"></i>
-                    <div class="media-body">
-                        <h4 class="media-heading">excellent quality</h4>
-                        <p>All products are direct from Japan. We guarantee the quality of the goods</p>
-                    </div>
+                <i class="fa fa-plane fa-4x"></i>
+                  <div class="media-body">
+                    <h4 class="media-heading">excellent quality</h4>
+                    <p>All products are direct from Japan. We guarantee the quality of the goods</p>
+                  </div>
                 </div>
 
             </div>
@@ -87,126 +87,135 @@
 
                 <div class="media">
                     <i class="fa fa-shield fa-4x"></i>
-                    <div class="media-body">
-                        <h4 class="media-heading">Secure payments</h4>
-                        <p>You don't have to worry about paying for the item. You can pay by cash and card</p>
-                    </div>
+                  <div class="media-body">
+                    <h4 class="media-heading">Secure payments</h4>
+                    <p>You don't have to worry about paying for the item. You can pay by cash and card</p>
+                  </div>
                 </div>
 
             </div>
-
+            
         </div>
     </div>
     <!--Categories-->
     <div class="categoriessection" id="category">
-        <div class="wrapper">
+        <div class="container">
             <h2 class="section-title">Categories</h2>
             <div class="categories">
                 <div class="numofcat">
-                    <p class="titless">Cosmetics</p>
+                    <p class="titless text-black">Cosmetics</p>
                     <img src="images/cos.jpg" class="picturecat" alt="Category">
                 </div>
                 <div class="numofcat">
-                    <p class="titless">Gadgets</p>
+                    <p class="titless text-black">Gadgets</p>
                     <img src="images/gadgets.jpg" class="picturecat" alt="Category">
                 </div>
                 <div class="numofcat">
-                    <p class="titless">Manga</p>
-                    <a href="">
-                        <img src="images/manga.jpg" class="picturecat" alt="Category">
-                    </a>
+                    <p class="titless text-black">Manga</p>
+                    <a href="category-manga.html">
+                    <img src="images/manga.jpg" class="picturecat" alt="Category">
+                </a>
                 </div>
                 <div class="numofcat">
-                    <p class="titless">sweets</p>
+                    <p class="titless text-black">Sweets</p>
                     <img src="images/sweets.jpg" class="picturecat" alt="Category">
-                </div>
+                    </div>
             </div>
         </div>
     </div>
-    <!--Popular products-->
+<!--Popular products-->
     <section class="popular-product" id="popular-product">
         <div class="container">
             <div class="section-title">
                 <h2>POPULAR PRODUCTS</h2>
             </div>
             <div class="row">
-                <div class="col-lg-3 col-sm-6">
-                    <div class="product-item">
+                <div class="col-lg-3 col-sm-6 ">
+                    <div class="product-item ">
                         <div class="pi-pic">
-                            <a href="#"><img src="./images/products/aot.jpg" class="products-picture" alt=""></a>
+                            <a href="#"><img src="./images/products/aot.jpg" class="products-picture animate1" alt=""></a>
                         </div>
-                        <div class="pi-text">
+                        <div class="pi-text ">
                             <p>Attack on Titan vol 1</p>
+                            <span class="price">3000 tg</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="product-item">
                         <div class="pi-pic">
-                            <a href="#"><img src="./images/products/bioreuv.png" class="products-picture" alt=""></a>
+                            <a href="#"><img src="./images/products/bioreuv.png" class="products-picture animate1" alt=""></a>
                         </div>
                         <div class="pi-text">
                             <p>Makeup kit SK2&DHC</p>
+                            <span class="price">7000 tg</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="product-item">
                         <div class="pi-pic">
-                            <a href="#"><img src="./images/products/taiyaku.jpg" class="products-picture" alt=""></a>
+                            <a href="#"><img src="./images/products/taiyaku.jpg" class="products-picture animate1" alt=""></a>
                         </div>
                         <div class="pi-text">
                             <p>Taiyaki </p>
+                            <span class="price">2000 tg</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="product-item">
                         <div class="pi-pic">
-                            <a href="#"><img src="./images/products/mochi.jpg" class="products-picture" alt=""></a>
+                            <a href="#"><img src="./images/products/mochi.jpg" class="products-picture animate1" alt=""></a>
                         </div>
                         <div class="pi-text">
                             <p>Mochi </p>
+                            <span class="price">2000 tg</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="product-item">
+
                         <div class="pi-pic">
-                            <a href="#"><img src="./images/products/onep.jpg" class="products-picture" alt=""></a>
+                            <a href="#"><img src="./images/products/onep.jpg" class="products-picture animate1" alt=""></a>
                         </div>
                         <div class="pi-text">
                             <p>One piece vol 95 </p>
+                            <span class="price">3500 tg</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="product-item">
                         <div class="pi-pic">
-                            <a href="#"><img src="./images/products/foma.jpg" class="products-picture" alt=""></a>
+                            <a href="#"><img src="./images/products/foma.jpg"  class="products-picture animate1" alt=""></a>
                         </div>
                         <div class="pi-text">
                             <p>Child-watching gadget Foma</p>
+                            <span class="price">4500 tg</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="product-item">
                         <div class="pi-pic">
-                            <a href="#"><img src="./images/products/jojo.jpg" class="products-picture" alt=""></a>
+                            <a href="#"><img src="./images/products/jojo.jpg" class="products-picture animate1" alt=""></a>
                         </div>
                         <div class="pi-text">
-                            <p>JoJo's Bizarre Adventure: Part 1 </p>
+                            <p>JoJo's Bizarre Adventure 1 </p>
+                            <span class="price">4000 tg</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
                     <div class="product-item">
                         <div class="pi-pic">
-                            <a href="#"><img src="./images/products/sony.jpg" class="products-picture" alt=""></a>
+                            <a href="#"><img src="./images/products/sony.jpg" class="products-picture  animate1" alt=""></a>
                         </div>
                         <div class="pi-text">
                             <p>Sony Xperia </p>
+                            <span class="price">44000 tg</span>
                         </div>
                     </div>
                 </div>
@@ -217,14 +226,13 @@
     <section class="footersection">
         <div class="container">
             <div class="flogo text-center">
-                <p class="shophame text-white" style="display: block;">Touhou Shop</p>
-            </div>
-            <div class="row">
+                <p class="foshophame" style="display: inline-block;">Touhou Shop</p>
+             </div><br>
+             <div class="row">
                 <div class="col-lg-3 col-sm-6">
                     <div class="infpart linkspart">
                         <h2 class="footerh2">About us</h2>
-                        <p>We have been dealing with Japanese things for over 5 years. All products officially come from
-                            Japan.</p>
+                        <p>We have been dealing with Japanese things for over 5 years. All products officially come from Japan.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-sm-6">
@@ -244,7 +252,7 @@
                         <ul>
                             <li><a href="">Cosmetics</a></li>
                             <li><a href="">Gadgets</a></li>
-                            <li><a href="">Manga</a></li>
+                            <li><a href="category-manga.html">Manga</a></li>
                             <li><a href="">Sweets</a></li>
                         </ul>
                     </div>
@@ -253,12 +261,12 @@
                     <div class="infpart linkspart">
                         <h2 class="footerh2">Contact</h2>
                         <p><strong>Company:</strong> Happy Angel<br><br>
-                            <strong>Address:</strong> Kazakhstan, Almaty, Abay, 109v (Globus Busyness center)<br><br>
-                            <strong>Contact Number:</strong> +7 (700) 000 00 01
+                        <strong>Address:</strong> Kazakhstan, Almaty, Abay, XXX<br><br>
+                        <strong>Contact Number:</strong> +7 (700) 000 00 01
                         </p>
                         <div class="social">
                             <div class="social-icons icon-circle list-unstyled list-inline">
-                                <li> <a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li> <a href="#"><i class="fa fa-facebook"></i></a></li> 
                                 <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
                                 <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
                                 <li> <a href="#"><i class="fa fa-vk"></i></a></li>
@@ -271,7 +279,7 @@
             <p class="text-white text-center mb-4">Copyright © 2021.All rights reserved.</p>
         </div>
     </section>
-    <div id="map-canvas"></div>
+    <div id="map-canvas" style="display:none;"></div>
     
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly&channel=2"></script>
