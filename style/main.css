@@ -342,6 +342,7 @@ h6 {
 .products-picture{
 	height: 324px;
 	width: 216px;
+	border-radius: 10px;
 }
 /*Foooter section*/
 .footersection{
@@ -501,6 +502,14 @@ transform: scale(1.5);
 .mangabg1{
 	background: url(../images/backgroundmanga.jpg);
 	background-repeat: no-repeat;
+	background-position: top center;
+	background-attachment: fixed;
+	color: #cfcfcf;
+}
+.sweetsbg1{
+	background: url(../images/sweetsbg1.jpg);
+	background-repeat: no-repeat;
+	background-size: contain;
 	background-position: top center;
 	background-attachment: fixed;
 	color: #cfcfcf;
