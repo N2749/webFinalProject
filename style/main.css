@@ -437,7 +437,7 @@ h6 {
 	line-height: 25px;
 	text-align: center;
 	color: #FFF;
-	color: rgba(255, 255, 255, 0.8);
+	color: RGBA(143,143,143,0.8);
 	-webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
 	-ms-transition: all 0.3s ease-in-out;
@@ -508,6 +508,14 @@ transform: scale(1.5);
 }
 .sweetsbg1{
 	background: url(../images/sweetsbg1.jpg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: top center;
+	background-attachment: fixed;
+	color: #cfcfcf;
+}
+.contactbg1{
+	background: url(../images/contact.jpg);
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: top center;
@@ -837,4 +845,20 @@ select.minimal:focus {
 	color: #8f8f8f;
 	margin-bottom: 25px;
 	line-height: 1.8;
+}
+
+.address-section{
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+.infoaddd{
+	padding: auto;
+	text-align: center;
+}
+.infoaddd h3{
+	font-size: 42px;
+	font-weight: 500;
+	text-transform: uppercase;
+	font-family: "Poppins", sans-serif;
+	text-align: center;
 }
