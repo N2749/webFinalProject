@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500;1,600&display=swap');
+.decor {
+   position: relative;
+   max-width: 400px;
+   margin: auto;
+   background: #d5e2ed;
+   border-radius: 30px;
+}
+.form-inner {
+   padding: 50px;
+}
+.form-inner input, .form-inner textarea {
+   display: block;
+   width: 100%;
+   padding: 0 20px;
+   margin-bottom: 10px;
+   background: #E9EFF6;
+   line-height: 40px;
+   border-width: 0;
+   border-radius: 20px;
+   font-family: 'Roboto', sans-serif;
+}
+.form-inner input[type="submit"] {
+   margin-top: 30px;
+   background: #f73149;
+   border-bottom: 2px solid #fc4258;
+   color: white;
+   text-align: center;
+   font-size: 24px;
+   text-transform: uppercase;
+   margin: 30px auto 10px;
+}
+.form-inner textarea {
+   resize: none;
+}
+.form-inner h3 {
+   margin-top: 0;
+   text-align: center;
+   font-family: 'Poppins', sans-serif;
+   text-align: center;
+   font-weight: 500;
+   font-size: 36px;
+   color: #023026;
+}
