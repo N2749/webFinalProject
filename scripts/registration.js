@@ -120,8 +120,8 @@ function addUser() {
 }
 
 function success() {
-    let choice = confirm(
-        "You have succesfully registered. Do you want to leave registration page?"
-    );
-    if (choice) document.location.href = "start.html";
+    swal("You have succesfully registered","You will automatically redirected to login page after 3 seconds.", "success");
+    setTimeout(() => {
+        document.location.href = "start.html";
+    }, 3000);
 }

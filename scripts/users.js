@@ -28,7 +28,7 @@ function disableUser(button) {
     }
     else {
         users[idInt].ban = false;
-        alert("User unbanned")
+        swal("User unbanned");
     }
     localStorage.setItem("users", JSON.stringify(users));
 }
@@ -76,7 +76,7 @@ function deleteUser(button) {
     let listOfUsers = user.parentNode;
     if (confirm("Are you sure? The data will be lost forever")) {
         let users = JSON.parse(localStorage.getItem("users"));
-        users.splice(parseInt(user.id) - 1, 1);
+        users.splice(parseInt(user.id), 1);
         localStorage.setItem("users", JSON.stringify(users));
         listOfUsers.removeChild(user);
     }

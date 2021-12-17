@@ -81,7 +81,8 @@ function banReason() {
     let users = JSON.parse(localStorage.getItem("users"));
     for (let user of users) {
         if (user.username == login.value || user.email == login.value)
-            alert(`You were banned. The reason is: ${user.banReason}`);
+            swal("You were banned", `the reason is: ${user.banReason}`, "error");
+//            alert(`You were banned. The reason is: ${user.banReason}`);
     }
 }
 

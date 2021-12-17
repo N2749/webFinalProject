@@ -1,5 +1,23 @@
 {
   "dependencies": {
     "sweetalert2": "^11.3.0"
-  }
+  },
+  "name": "webfinalproject",
+  "version": "1.0.0",
+  "main": "registration.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/N2749/webFinalProject.git"
+  },
+  "author": "N2749",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/N2749/webFinalProject/issues"
+  },
+  "homepage": "https://github.com/N2749/webFinalProject#readme",
+  "description": ""
 }
