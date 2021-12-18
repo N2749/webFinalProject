@@ -58,13 +58,13 @@
 			<div class="row">
 				<div class="col-lg-6">
 					<div class="pictureofpro">
-						<img src="./images/products/jojo.jpg" class="jojopicture">
+						<img src="./images/products/jojo.jpg" class="jojopicture" id="bigImage">
 					</div>
 					<div class="otherpict"style="overflow: hidden; outline: none;">
-						<div class="choosepict">
-							<img src="./images/products/jojo.jpg" class="preview .active">
-							<img src="./images/products/jojo2.jpg" class="preview">
-							<img src="./images/products/jojopanel.jpg" class="preview">
+						<div class="choosepict" id="container">
+							<img src="./images/products/jojo.jpg" class="preview smallImage">
+							<img src="./images/products/jojo2.jpg" class="preview smallImage">
+							<img src="./images/products/jojopanel.jpg" class="preview smallImage">
 						</div>
 					</div>
 				</div>
@@ -87,6 +87,7 @@
 						<h2>Quantity</h2>
 						<div class="amount"><input type="text" name="price" value="1"></div>
 					</div>
+					<h2 class="price" style="font-size: 24px">Price: 4000 tg</h2>
 					<a href="#" class="floating-button">Buy</a>
 					<div class="inf-inf">
 						<h2 class="inf-inf-title">Information</h2><br>
@@ -167,5 +168,6 @@
 			<p class="text-white text-center mb-4">Copyright © 2021.All rights reserved.</p>
 		</div>
 	</section>
+	<script src="changePhoto.js"></script>
 </body>
 </html>
