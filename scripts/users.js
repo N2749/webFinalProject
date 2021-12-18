@@ -4,6 +4,10 @@ window.onload = () => {
     showUsers();
 };
 
+window.disableUser = disableUser;
+window.changeUser = changeUser;
+window.deleteUser = deleteUser;
+
 function showUsers() {
     let userList = document.getElementById("userList");
     userList.innerHTML = ``;
@@ -23,6 +27,7 @@ function showUsers() {
         </li>`;
     }
 }
+
 function disableUser(button) {
     let user = button.parentNode.parentNode;
     let users = JSON.parse(localStorage.getItem("users"));
@@ -51,15 +56,16 @@ function changeUser(button) {
     switch (choice) {
         case "1":
             (async () => {
-                const { value: username } = await Swal.fire({
-                    title: `Type new username for ${users[idInt].username}`,
+                const { value: newUserName } = await Swal.fire({
+                    title: `Enter new username for ${users[idInt].username}`,
                     input: "text",
                 });
-
-                if (username) {
-                    Swal.fire(`Entered email: ${username}`);
-                }
-                users[parseInt(user.id)].username = username;
+                if (newUserName) users[idInt].username = newUserName;
+                else
+                    Swal.fire({
+                        icon: "error",
+                        title: "Wrong Username",
+                    });
             })();
             break;
         case "2":
@@ -89,4 +95,3 @@ function deleteUser(button) {
     }
     showUsers();
 }
-
