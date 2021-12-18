@@ -1,3 +1,4 @@
+import Swal from "../node_modules/sweetalert2/src/sweetalert2.js"
 const form = document.getElementById("form");
 const login = document.getElementById("login");
 const password = document.getElementById("password");

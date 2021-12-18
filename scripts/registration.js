@@ -1,9 +1,12 @@
+import Swal from "../node_modules/sweetalert2/src/sweetalert2.js";
+
 const form = document.getElementById("form");
 const username = document.getElementById("username");
 const email = document.getElementById("email");
 const password = document.getElementById("password");
 const password2 = document.getElementById("password2");
 var correctCounter;
+
 if (localStorage.getItem("users") == null) {
     let usersArray = [];
     localStorage.setItem("users", JSON.stringify(usersArray));
@@ -120,7 +123,11 @@ function addUser() {
 }
 
 function success() {
-    swal("You have succesfully registered","You will automatically redirected to login page after 3 seconds.", "success");
+    swal(
+        "You have succesfully registered?",
+        "You will automatically redirected to login page after 3 seconds.",
+        "success"
+    );
     setTimeout(() => {
         document.location.href = "start.html";
     }, 3000);
