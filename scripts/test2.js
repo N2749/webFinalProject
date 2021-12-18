@@ -1,11 +1,17 @@
+import Swal from "/node_modules/sweetalert2/src/sweetalert2.js";
 document.getElementById("button").addEventListener("click", () => {
-    swal({
+    Swal.fire(
+        'You have succesfully registered?',
+        'You will automatically redirected to login page after 3 seconds.',
+        'success'
+      )
+    Swal.fire({
         title: "You have succesfully registered",
         text: "You will automatically redirected to login page after 3 seconds.",
-        icon: "success",
-        position: "center",
+        //icon: "success",
+        confirmButtonText: "OK"
     });
-    setTimeout(() => {
+    /*setTimeout(() => {
         document.location.href = "start.html";
-    }, 3000);
+    }, 3000);*/
 });
