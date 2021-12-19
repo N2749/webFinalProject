@@ -15,9 +15,7 @@ function showUsers() {
     for (let i = 0; i < users.length; i++) {
         userList.innerHTML += `<li id="${i}">
         <span class="users-number">${i + 1}. </span>
-        <a href="#">
         <span class="users-name">${users[i].username}</span>
-        </a>
         <span class="users-email">${users[i].email}</span>
         <div class="button-part">
         <button class="blockbtn floating-button" onclick="disableUser(this)"><span class="text">(un)ban</span></button>
