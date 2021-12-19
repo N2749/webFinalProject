@@ -10,12 +10,11 @@ font-weight: normal;
 	margin: 0;
 	padding: 0;
 }
-html{
+html, body{
 	height: 100%;
-}
-body{
-
-	height: 100%;
+	font-family: 'Josefin Sans', sans-serif!important;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
 }
 h1,
 h2,
