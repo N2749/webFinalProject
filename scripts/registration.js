@@ -89,8 +89,8 @@ function isUsername(username) {
 
 function isEmail(email) {
     return (
-        /^([\.\_\-a-zA-Z0-9]+)@([a-zA-Z0-9]+)\.([a-zA-Z]+)$/.test(email) ||
-        /^([\.\_\-a-zA-Z0-9]+)@([a-zA-Z0-9]+)\.([a-zA-Z]+)\.([a-zA-Z]+)$/.test(
+        /^([\.\_\-a-z0-9]+)@([a-z]+)\.([a-z]+)$/.test(email) ||
+        /^([\.\_\-a-z0-9]+)@([a-z]+)\.([a-z]+)\.([a-z]+)$/.test(
             email
         )
     );
@@ -98,7 +98,7 @@ function isEmail(email) {
 
 function isPassword(password) {
     return (
-        !/^\@\!\#\$\%\^\&\*\(\)\+\=$/.test(password) &&
+        !/^[\@\!\#\$\%\^\&\*\(\)\+\=]$/.test(password) &&
         /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z_-]{8,}$/.test(password)
     );
 }
