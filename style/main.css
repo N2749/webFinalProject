@@ -163,6 +163,7 @@ h6 {
 .wrapper {
   max-width: 1110px;
   margin: 0 auto;
+  display: grid;
   padding-left: 10px;
   padding-right: 10px;
 }
