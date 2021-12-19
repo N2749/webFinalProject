@@ -267,6 +267,7 @@ h6 {
 	text-align: center;
     font-size: 36px;
     text-transform: uppercase;
+   font-family: "Poppins", sans-serif;
 }
 .categories {
   display: -webkit-box;
@@ -295,6 +296,7 @@ h6 {
   font-weight: 600;
   margin-bottom: 0;
   text-transform: uppercase;
+  font-family: "Poppins",sans-serif;
 }
 .picturecat{
 	width: 210px;
@@ -310,6 +312,7 @@ h6 {
 }
 .popular-product .section-title {
 	margin-bottom: 70px;
+	font-family: "Poppins", sans-serif;
 }
 .product-item .pi-pic {
 	position: relative;
