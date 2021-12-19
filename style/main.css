@@ -144,7 +144,9 @@ h6 {
   }
 }
 
-
+.contact-tit{
+	left: 55%;
+}
 .nav-list {
   list-style: none;
   padding-left: 0;
@@ -533,14 +535,27 @@ transform: scale(1.5);
 	margin-bottom: 10px;
 	display: inline-block;
 	width: 330px;
-	color: #fff;
 	position: relative;
-	left: 65%;
 	top: 140px;
 }
-@media (max-width: 778px){
-.slider .manga-item h2 {
+.manga-tit{
+	left: 65%;
+	color: #fff;
+}
+.sweet-tit{
+	left: 65%;
+	color: black;
+}
+@media (max-width: 996px){
+.slider .manga-item .manga-tit {
   left: 25%;
+}
+.slider .manga-item .contact-tit{
+	left: 10%;
+	color: black;
+}
+.slider .manga-item .sweet-tit{
+	left: 15%;
 }
 }
 /*category section*/
@@ -657,7 +672,6 @@ select.minimal:focus {
 }
 .pagination a {
   color: black;
-  float: right;
   padding: 8px 16px;
   text-decoration: none;
 }
@@ -801,6 +815,7 @@ select.minimal:focus {
 	text-align: center;
 	background-color: transparent;
 }
+
 .floating-button {
   text-decoration: none;
   display: inline-block;
