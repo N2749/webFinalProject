@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="style/adaptive.css">
     <link rel="stylesheet" type="text/css" href="style/map.css">
     <link rel="stylesheet" type="text/css" href="style/main.anim.css">
+    <link rel="stylesheet" type="text/css" href="style/toggle.css">
 </head>
 
 <body>
@@ -25,7 +26,7 @@
                     <a href="#" class="touhoulogo">
                         <img class="logo" src="images/logo1.png">
                     </a>
-                    <p class="shophame text-end media">Touhou Shop</p>
+                    <p class="shophame text-end">Touhou Shop</p>
                     <nav>
                         <ul class="nav nav-info">
                             <li class="nav-item"><a href="mainpage.html" class="nav-link">Home</a></li>
@@ -38,6 +39,11 @@
                     <a class="nav-item" href=""><img src="images/shopping-cart.png" class="cart"></a>
                     <a class="nav-item" href=""><img src="images/user.png" class="account"></a>
                     <a class="nav-item" href="start.html"><img src="images/logout.png" class="logoff"></a>
+                    <div class="toggle-btn">
+                        <div class="togline line1"></div>
+                        <div class="togline line2"></div>
+                        <div class="togline line3"></div>
+                    </div>
                 </header>
             </div>
         </div>
@@ -76,7 +82,7 @@
             </div>
             <div class="col-md-4">
                 <div class="media _anim_items">
-                    <i class="fa fa-plane fa-4x"></i>
+                    <i class="fa fa-shopping-bag fa-4x"></i>
                     <div class="media-body">
                         <h4 class="media-heading">excellent quality</h4>
                         <p>All products are direct from Japan. We guarantee the quality of the goods</p>
@@ -208,7 +214,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="product-item">
                         <div class="pi-pic">
-                            <a href="#"><img src="./images/products/jojo.jpg" class="products-picture animate1"
+                            <a href="mangapage1.html"><img src="./images/products/jojo.jpg" class="products-picture animate1"
                                     alt=""></a>
                         </div>
                         <div class="pi-text">
@@ -290,11 +296,23 @@
             <p class="text-white text-center mb-4">Copyright © 2021.All rights reserved.</p>
         </div>
     </section>
+    <div class="nav-bar">
+        <ul class="nav-list">
+            <li class="nav-list-item"><a href=""><img class="logo" src="images/logo1.png">
+                <p class="navshopname">Touhou Shop</p></a>
+            </li>
+            <li class="nav-list-item"><a href="#mainpage.html" class="nav-link">Home</a></li>
+            <li class="nav-list-item"><a href="mainpage.html#category" class="nav-link">Categories</a></li>
+            <li class="nav-list-item"><a href="" class="nav-link">Delivery</a></li>
+            <li class="nav-list-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+    </div>
     <div id="map-canvas" style="display:none;"></div>
 
     <script async
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly&channel=2"></script>
     <script src="scripts/map.js"></script>
+    <script src="scripts/toggle.js"></script>
     <script src="scripts/animation.js"></script>
 </body>
 
