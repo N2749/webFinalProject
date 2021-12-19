@@ -13,7 +13,6 @@ form.addEventListener("submit", (e) => {
         else banReason();
     }
 });
-//validation of inputs
 function checkInputs() {
     const loginValue = login.value;
     const passwordValue = password.value;
@@ -82,8 +81,12 @@ function banReason() {
     let users = JSON.parse(localStorage.getItem("users"));
     for (let user of users) {
         if (user.username == login.value || user.email == login.value)
-            swal("You were banned", `the reason is: ${user.banReason}`, "error");
-//            alert(`You were banned. The reason is: ${user.banReason}`);
+            Swal.fire({
+                title:"You were banned", 
+                text: `The reason is: ${user.banReason}`, 
+                icon: "error",
+                confirmButtonColor: "#bc002d "
+            });
     }
 }
 

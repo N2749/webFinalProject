@@ -56,7 +56,7 @@ function checkInputs() {
             "Password must be equal or more than 8 characters"
         );
     } else if (!isPassword(passwordValue)) {
-        setErrorFor(password, "Not a valid Password");
+        setErrorFor(password, " Illegal characters are present");
     } else {
         setSuccessFor(password);
     }
@@ -84,7 +84,7 @@ function setSuccessFor(input) {
 }
 
 function isUsername(username) {
-    return /^[a-zA-Z0-9]+$/.test(username);
+    return /^[a-zA-Z0-9-_]+$/.test(username);
 }
 
 function isEmail(email) {
@@ -117,17 +117,18 @@ function addUser() {
         email: email.value,
         password: password.value,
         ban: false,
-        banReason: ""
+        banReason: "",
     });
     localStorage.setItem("users", JSON.stringify(users));
 }
 
 function success() {
-    swal(
-        "You have succesfully registered?",
-        "You will automatically redirected to login page after 3 seconds.",
-        "success"
-    );
+    Swal.fire({
+        title: "You have succesfully registered",
+        text: "You will automatically redirected to login page after 3 seconds.",
+        icon: "success",
+        confirmButtonColor: "#bc002d "
+    });
     setTimeout(() => {
         document.location.href = "start.html";
     }, 3000);
