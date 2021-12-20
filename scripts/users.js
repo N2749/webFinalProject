@@ -140,7 +140,6 @@ function changeUser(button) {
 
 function deleteUser(button) {
     let user = button.parentNode.parentNode;
-    let listOfUsers = user.parentNode;
     let users = JSON.parse(localStorage.getItem("users"));
     Swal.fire({
         title: "Are you sure? The data will be lost forever",
